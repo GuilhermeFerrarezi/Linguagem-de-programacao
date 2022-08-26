@@ -37,8 +37,8 @@ namespace Aula2
             cliente2.endereco = "Rua XXXX, 32";
 
             Conta c2 = new Conta();
-            c1.numero = 1;
-            c1.titular = cliente2;
+            c2.numero = 2;
+            c2.titular = cliente2;
             c2.saldo = 3000;
 
             Console.WriteLine(c2.MostraSaldo());
@@ -46,6 +46,8 @@ namespace Aula2
             c1.Transferir(250, c2);
 
             Console.WriteLine(c1.MostraSaldo());
+            Console.WriteLine(c2.MostraNumero());
+            Console.WriteLine(c2.MostraTitular());
             Console.WriteLine(c2.MostraSaldo());
 
 
@@ -53,6 +55,7 @@ namespace Aula2
         }
     }
 }
+
 
 ///////////////////////////////////////////////////////
 

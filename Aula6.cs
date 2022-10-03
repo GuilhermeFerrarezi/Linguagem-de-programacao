@@ -18,7 +18,7 @@ namespace Aula6
 ////////////////////////////////////////////////////
 
 
-namespace Aula7
+namespace Aula6
 {
     class Pessoa
     {
@@ -49,7 +49,7 @@ namespace Aula7
 
 //////////////////////////////////////////
 
-namespace Aula7
+namespace Aula6
 {
     class Aluno : Pessoa
     {

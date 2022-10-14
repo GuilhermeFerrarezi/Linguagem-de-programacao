@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace aula7
+namespace Aula7
 {
     class Program
     {
@@ -13,44 +13,70 @@ namespace aula7
         {
             Departamento d = new Departamento();
 
-            d.Nome = "vendas";
+            d.nome = "vendas";
             d.adicionaFunc("Maria", "6765657", 123);
             d.adicionaFunc("Pedro", "2213438", 789);
 
-            d.imprimeFunc();
+            d.imprimeDepartamento();
 
             Console.ReadKey();
         }
     }
-    
+
     /////////////////////////////////////////////////////////
-    
+
     class Funcionario
     {
         public Funcionario(string nome, string cpf, int mat)
         {
-            this.Nome = nome;
-            this.Cpf = cpf;
-            this.Matricula = mat;
+            this.nome = nome;
+            this.cpf = cpf;
+            this.matricula = mat;
         }
-        public string Nome{ get; set;}
-        public string Cpf{ get; set;}
-        public int Matricula { get; set; }
+        private string nome;
+        private string cpf;
+        private int matricula;
 
         public void imprimeFuncionario()
         {
-            Console.WriteLine(this.Nome + " " + this.Cpf + " " + this.Matricula);
+            Console.WriteLine(this.nome + " " + this.cpf + " " + this.matricula);
+        }
+
+        public void setNome(string nome)
+        {
+            this.nome = nome;
+        }
+        public void setCpf(string cpf)
+        {
+            this.cpf = cpf;
+        }
+        public void setNome(int mat)
+        {
+            this.matricula = mat;
+        }
+
+        public string getNome()
+        {
+            return this.nome;
+        }
+        public string getCpf()
+        {
+            return this.nome;
+        }
+        public int getMat()
+        {
+            return this.matricula;
         }
     }
-    
+
     /////////////////////////////////////////////////////////////////
-    
+
     class Departamento
     {
-        public string Nome;
+        public string nome;
         ArrayList funcionarios = new ArrayList();
 
-        public void adicionaFunc(string nome, string cpf ,int mat)
+        public void adicionaFunc(string nome, string cpf, int mat)
         {
             Funcionario f = new Funcionario(nome, cpf, mat);
 
@@ -58,9 +84,9 @@ namespace aula7
         }
 
 
-        public void imprimeFunc()
+        public void imprimeDepartamento()
         {
-           foreach (Funcionario f in funcionarios)
+            foreach (Funcionario f in funcionarios)
             {
                 f.imprimeFuncionario();
             }
